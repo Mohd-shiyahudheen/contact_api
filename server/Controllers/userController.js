@@ -39,7 +39,7 @@ const updateData = async (req, res) => {
                 }
             }, { new: true }).then(async(response)=>{
                 res.status(200).json(response)
-            })
+            }).catch((err)=>res.status(500).json(err.message))
 
         } else {
             console.log({ message: "nothing is here" });
