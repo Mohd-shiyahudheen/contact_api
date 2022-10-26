@@ -1,9 +1,10 @@
 const express = require('express');
-const ContactDetails = require('../Controllers/userController');
+const {ContactDetails, updateData} = require('../Controllers/userController');
 const router = express.Router()
 
 
 router.post('/contact',ContactDetails)
+router.put('/edit/:id',updateData)
 
 
 
